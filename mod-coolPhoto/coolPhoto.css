@@ -1,0 +1,143 @@
+/* coolPhoto galley plugin styles */
+
+.modal-coolphoto {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 12px 15px 15px;
+    border-radius: 15px;
+    background: #fff;
+    z-index: 995;
+}
+
+.modal-coolphoto-background {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: #000;
+    opacity: 0.5;
+    z-index: 990;
+}
+
+.coolphoto-title {
+    display: none;
+    position: absolute;
+    top: 36px;
+    left: 15px;
+    right: 15px;
+    padding: 15px;
+    background: transparent;
+    overflow: hidden;
+    color: #fff;
+    z-index: 998;
+}
+
+.coolphoto-title-background {
+    display: none;
+    position: absolute;
+    top: 36px;
+    left: 15px;
+    right: 15px;
+    background: #000;
+    opacity: 0.6;
+    z-index: 997;
+    content: '';
+}
+
+.modal-coolphoto:hover .coolphoto-title,
+.modal-coolphoto:hover .coolphoto-title-background,
+.modal-coolphoto:hover .btn-coolphoto-prev,
+.modal-coolphoto:hover .btn-coolphoto-next {
+    display: block;
+}
+
+.coolphoto-range-pos {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: rgb(129, 129, 129);
+}
+
+button::-moz-focus-inner {
+    border: none;
+}
+
+.btn-close-modal {
+    display: block;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 35px;
+    height: 35px;
+    border: none;
+    background: url('../images/coolphoto/coolphoto-btn-close-modal.png');
+    z-index: 999;
+}
+
+.btn-coolphoto-prev,
+.btn-coolphoto-next {
+    display: none;
+    position: absolute;
+    top: 39px;
+    bottom: 15px;
+    width: 50%;
+    border: none;
+    outline: none !important;
+    background: transparent;
+    z-index: 996;
+}
+
+.btn-coolphoto-prev {
+    left: 0;
+}
+
+.btn-coolphoto-next {
+    right: 0;
+}
+
+.btn-coolphoto-prev:after,
+.btn-coolphoto-next:after {
+    display: block;
+    position: absolute;
+    top: 50%;
+    width: 47px;
+    height: 47px;
+    margin-top: -23px;
+    border: none;
+    background: url('../images/coolphoto/coolphoto-btn-nav.png');
+    content: '';
+    z-index: 997;
+}
+
+.btn-coolphoto-prev:after {
+    left: 25px;
+    background-position: 0 0;
+}
+
+.btn-coolphoto-next:after {
+    right: 25px;
+    background-position: -47px 0;
+}
+
+.btn-close-modal:hover,
+.btn-coolphoto-prev:hover,
+.btn-coolphoto-next:hover {
+    cursor: pointer;
+}
+
+/* single photo mode */
+
+.modal-coolphoto.single-photo:hover .coolphoto-title,
+.modal-coolphoto.single-photo:hover .coolphoto-title-background,
+.modal-coolphoto.single-photo:hover .btn-coolphoto-prev,
+.modal-coolphoto.single-photo:hover .btn-coolphoto-next {
+    display: none;
+}
+
+.modal-coolphoto.single-photo .coolphoto-range-pos {
+    color: #fff;
+}
